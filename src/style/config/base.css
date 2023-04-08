@@ -49,15 +49,16 @@ a {
 }
 
 .button {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 26px 48px 26px 48px;
-  font-size: 18px;
   background-color: var(--text-primary);
   border-radius: 18px;
   border: none;
   column-gap: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  padding: 26px 48px 26px 48px;
 }
 
 .button span {
@@ -97,40 +98,4 @@ a {
   font-size: 22px;
   margin-top: 8px;
   color: var(--text-secondary);
-}
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
 }
